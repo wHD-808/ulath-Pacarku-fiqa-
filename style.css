@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* Canvas background */
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Intro overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  transition: opacity 0.8s ease;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.introCard {
+  text-align: center;
+  padding: 20px;
+}
+
+#introText {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+#introSub {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff4e8a, #ff9a8b);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Stage + slides */
+#stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-width: 90%;
+  max-height: 70vh;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+/* Transition text */
+.transitionCard {
+  padding: 20px;
+  text-align: center;
+}
+
+.transitionCard h2 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Video slide */
+.videoSlide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Question buttons */
+.controls {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  text-align: center;
+}
+
+.questionBtn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.questionBtn:hover {
+  transform: scale(1.05);
+}

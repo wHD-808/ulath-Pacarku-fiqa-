@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HBD Sayangkuu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- particle canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Intro screen -->
+  <div id="introScreen" class="overlay">
+    <div class="introCard">
+      <h1 id="introText">Happy Birthday Sayangkuu fiqaa 🎉</h1>
+      <p id="introSub">Baca dan jangan terburu buru ya, pencet aja tombolnya yang.</p>
+      <button id="startBtn" class="btn">Mulai</button>
+    </div>
+  </div>
+
+  <!-- audio (loop) -->
+  <audio id="bgMusic" loop>
+    <source src="assets/sound.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- slideshow area -->
+  <main id="stage">
+    <div class="slides" id="slides">
+      <section class="slide"><img src="assets/foto1.jpg" alt="Foto 1" /></section>
+      <section class="slide"><img src="assets/foto2.jpg" alt="Foto 2" /></section>
+      <section class="slide"><img src="assets/foto3.jpg" alt="Foto 3" /></section>
+      <section class="slide"><img src="assets/foto4.jpg" alt="Foto 4" /></section>
+      <section class="slide"><img src="assets/foto5.jpg" alt="Foto 5" /></section>
+
+      <section class="slide transition">
+        <div class="transitionCard">
+          <h2 id="transitionText">Semoga semua doa kamu dikabulkan ya sayangkuu, panjang umur ya sayang, sayang kamu banget ❤️</h2>
+        </div>
+      </section>
+
+      <section class="slide videoSlide">
+        <video id="ucapanVideo" playsinline>
+          <source src="assets/video.mp4" type="video/mp4" />
+          Browser Anda tidak mendukung video.
+        </video>
+      </section>
+    </div>
+
+    <!-- question button area -->
+    <div id="questionArea" class="controls"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
